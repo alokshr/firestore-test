@@ -98,17 +98,17 @@ var initApp = function () {
   };
 
   window.addEventListener("keydown", (event) => {
-    if (event.key === "w") keyUp = true;
-    if (event.key === "s") keyDown = true;
-    if (event.key === "a") keyLeft = true;
-    if (event.key === "d") keyRight = true;
+    if (event.key.toLowerCase() === "w") keyUp = true;
+    if (event.key.toLowerCase() === "s") keyDown = true;
+    if (event.key.toLowerCase() === "a") keyLeft = true;
+    if (event.key.toLowerCase() === "d") keyRight = true;
   });
 
   window.addEventListener("keyup", (event) => {
-    if (event.key === "w") keyUp = false;
-    if (event.key === "s") keyDown = false;
-    if (event.key === "a") keyLeft = false;
-    if (event.key === "d") keyRight = false;
+    if (event.key.toLowerCase() === "w") keyUp = false;
+    if (event.key.toLowerCase() === "s") keyDown = false;
+    if (event.key.toLowerCase() === "a") keyLeft = false;
+    if (event.key.toLowerCase() === "d") keyRight = false;
   });
 
   let start: DOMHighResTimeStamp | undefined;
