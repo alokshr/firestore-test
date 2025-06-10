@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
+  get,
   getDatabase,
   onChildAdded,
   onChildChanged,
@@ -73,6 +74,7 @@ var initApp = function () {
     if (data.key) newStoredPlayers.delete(data.key);
     storedPlayers = new Map(newStoredPlayers);
   });
+  set(myPlayerRef, myPlayer);
 
   // Creates/updates a player in the database
   var updatePlayer = function (player: Player) {
