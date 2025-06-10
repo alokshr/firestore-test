@@ -50,6 +50,7 @@ var initApp = function () {
   const myPlayerRef = push(playersRef);
   storedPlayers.set(myPlayerRef.key, myPlayer);
   newStoredPlayers.set(myPlayerRef.key, myPlayer);
+  set(myPlayerRef, myPlayer);
 
   var keyUp = false;
   var keyDown = false;
